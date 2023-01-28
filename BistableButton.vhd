@@ -3,9 +3,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity BistableButton is
     Port (
-	    ButtonIn : in STD_LOGIC;
-	    Clock : in STD_LOGIC;
-	    Reset : in STD_LOGIC;
+	    ButtonIn  : in STD_LOGIC;
+	    Clock     : in STD_LOGIC;
+	    Reset     : in STD_LOGIC;
 	    ButtonOut : out STD_LOGIC
          );
 end BistableButton;
@@ -47,7 +47,7 @@ begin
       else 
 	 next_state_i <= st_released;
       end if;
-end case;
+   end case;
 	
 end process;
 
