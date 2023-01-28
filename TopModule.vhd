@@ -69,39 +69,43 @@ begin
 	ClockDiv : ClockDivider 
 		port map
 			( 
-				Reset	     => Reset,
-				Clock       => Clock,
-			 ClodkDivOut => s_Clock
+			  Reset	      => Reset,
+			  Clock       => Clock,
+			  ClodkDivOut => s_Clock
 			);  
 
 	BButton : BistableButton
 		port map
-			( ButtonIn  => Button,
-			 Clock 	 => s_Clock,
-			 Reset 	 => Reset,
-			 ButtonOut => s_Button
+			( 
+			  ButtonIn  => Button,
+			  Clock     => s_Clock,
+			  Reset     => Reset,
+			  ButtonOut => s_Button
 			);
 
 	Counter1 : CounterA
 		port map
-			( Clock => s_Clock,
-			 Reset  => Reset,
-			 CE     => s_Button,
-			 CoutA  => s_CoutA
+			( 
+			  Clock  => s_Clock,
+			  Reset  => Reset,
+			  CE     => s_Button,
+			  CoutA  => s_CoutA
 			);
 
 	Counter2 : CounterB 
 		port map
-			( Clock => s_Clock,
-			 Reset  => Reset,
-			 CoutB  => s_CoutB
+			( 
+			  Clock => s_Clock,
+			  Reset  => Reset,
+			  CoutB  => s_CoutB
 			);
 
 	Comparator1 : Comparator 
 		port map
-			( CinA => s_CoutA,
-			 CinB => s_CoutB,
-			 CompOut => CompOut
+			( 
+			  CinA => s_CoutA,
+			  CinB => s_CoutB,
+			  CompOut => CompOut
 			);
 		
 end Behavioral;
