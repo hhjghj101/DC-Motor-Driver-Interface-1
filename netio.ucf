@@ -5,4 +5,4 @@ NET "Button"   	LOC = "P94";
 NET "Reset"    	LOC = "P143";
 
 NET "CompOut"  	LOC = "P6";
-NET "Direction"  LOC = "P9";
+NET "Direction" LOC = "P9";
