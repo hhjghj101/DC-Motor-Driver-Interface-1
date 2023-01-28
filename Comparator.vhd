@@ -4,7 +4,6 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-
 entity Comparator is
     Port ( 
 	   CinA    : in STD_LOGIC_VECTOR(3 downto 0);
