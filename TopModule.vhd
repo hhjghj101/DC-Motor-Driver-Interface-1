@@ -6,12 +6,12 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity TopModule is
 	port ( 
-				Button    : in STD_LOGIC;
-				Reset     : in STD_LOGIC;
-				Clock     : in STD_LOGIC;
-				CompOut   : out STD_LOGIC;
-				Direction : out STD_LOGIC
-			);
+		Button    : in STD_LOGIC;
+		Reset     : in STD_LOGIC;
+		Clock     : in STD_LOGIC;
+		CompOut   : out STD_LOGIC;
+		Direction : out STD_LOGIC
+	);
 end TopModule;
 
 architecture Behavioral of TopModule is
