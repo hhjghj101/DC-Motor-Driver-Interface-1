@@ -21,6 +21,6 @@ begin
 	    CompOut <= '1';
 	 else 
 	    CompOut <= '0';
-	end if;
-    end process;
+      end if;
+   end process;
 end Behavioral;
