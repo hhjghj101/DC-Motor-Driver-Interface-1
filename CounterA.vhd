@@ -22,10 +22,10 @@ begin -- Up Counter
       begin
 	if (Reset = '1') then
 	    s_CountUp <= "0000";
-	      elsif(rising_edge(Clock)) then
-	      	 if(CE='1') then
+	       elsif(rising_edge(Clock)) then
+	       if(CE='1') then
 	    s_CountUp <= s_CountUp + "1";
-	end if;
+	 end if;
       end if;
 end process;
 
