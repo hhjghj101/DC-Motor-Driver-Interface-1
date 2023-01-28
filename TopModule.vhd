@@ -10,19 +10,17 @@ entity TopModule is
 		Reset     : in STD_LOGIC;
 		Clock     : in STD_LOGIC;
 		CompOut   : out STD_LOGIC;
-		Direction : out STD_LOGIC
-	);
+		Direction : out STD_LOGIC);
 end TopModule;
 
 architecture Behavioral of TopModule is
 	
 	component ClockDivider
-		port
-			(
-				Clock 		: in STD_LOGIC;
-				Reset 		: in STD_LOGIC;
-				ClockDivOut : out STD_LOGIC
-			);
+		port (
+		Clock 		: in STD_LOGIC;
+		Reset 		: in STD_LOGIC;
+		ClockDivOut : out STD_LOGIC
+		);
 	end component;
 
 	component BistableButton
