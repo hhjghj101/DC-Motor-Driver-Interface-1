@@ -7,7 +7,8 @@ entity BistableButton is
 	    ButtonIn : in STD_LOGIC;
 	    Clock : in STD_LOGIC;
 	    Reset : in STD_LOGIC;
-	    ButtonOut : out STD_LOGIC);
+	    ButtonOut : out STD_LOGIC
+         );
 end BistableButton;
 
 architecture Behavioral of BistableButton is
