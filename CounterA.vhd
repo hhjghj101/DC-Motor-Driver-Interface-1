@@ -4,7 +4,6 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-
 entity CounterA is
     Port ( 
 	   Clock : in STD_LOGIC;		    -- Clock Input
