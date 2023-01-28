@@ -6,25 +6,26 @@ use IEEE.NUMERIC_STD.ALL;
 
 
 entity CounterA is
-    Port ( Clock	: in STD_LOGIC; -- Clock Input
-           Reset	: in STD_LOGIC; -- Reset Input
-			  CE		: in STD_LOGIC; -- Clock Enabler
-           CoutA	: out STD_LOGIC_VECTOR(3 downto 0)); -- Output 4-bit Counter
+    Port ( 
+	   Clock : in STD_LOGIC; -- Clock Input
+           Reset : in STD_LOGIC; -- Reset Input
+	   CE	 : in STD_LOGIC; -- Clock Enabler
+           CoutA : out STD_LOGIC_VECTOR(3 downto 0)); -- Output 4-bit Counter
 end CounterA;
 
 architecture Behavioral of CounterA is
-	signal s_CountUp: std_logic_vector(3 downto 0);
+   signal s_CountUp: std_logic_vector(3 downto 0);
 	
 begin -- Up Counter
-	process(Clock, Reset) is
-		begin
-			if (Reset = '1') then
-				s_CountUp <= "0000";
-					elsif(rising_edge(Clock)) then
-					if(CE='1') then
-				s_CountUp <= s_CountUp + "1";
-			end if;
-		end if;
+   process(Clock, Reset) is
+      begin
+	if (Reset = '1') then
+	    s_CountUp <= "0000";
+	      elsif(rising_edge(Clock)) then
+	      if(CE='1') then
+	    s_CountUp <= s_CountUp + "1";
+	end if;
+      end if;
 end process;
 
 CoutA <= s_CountUp;
