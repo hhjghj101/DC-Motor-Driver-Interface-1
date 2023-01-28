@@ -4,7 +4,6 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-
 entity CounterB is
     Port ( 
 	   Clock : in STD_LOGIC; -- Clock Input
@@ -27,7 +26,7 @@ begin -- Up Counter
 	     else
 	  s_CountUp <= s_CountUp + "1";
         end if;
-   end if;
+    end if;
 end process;
 
 CoutB <= s_CountUp;
