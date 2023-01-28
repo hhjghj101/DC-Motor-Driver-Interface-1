@@ -7,10 +7,11 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity CounterA is
     Port ( 
-	   Clock : in STD_LOGIC; -- Clock Input
-           Reset : in STD_LOGIC; -- Reset Input
-	   CE	 : in STD_LOGIC; -- Clock Enabler
-           CoutA : out STD_LOGIC_VECTOR(3 downto 0)); -- Output 4-bit Counter
+	   Clock : in STD_LOGIC;		    -- Clock Input
+           Reset : in STD_LOGIC; 		    -- Reset Input
+	   CE	 : in STD_LOGIC; 		    -- Clock Enabler
+           CoutA : out STD_LOGIC_VECTOR(3 downto 0) -- Output 4-bit Counter
+         ); 
 end CounterA;
 
 architecture Behavioral of CounterA is
@@ -22,7 +23,7 @@ begin -- Up Counter
 	if (Reset = '1') then
 	    s_CountUp <= "0000";
 	      elsif(rising_edge(Clock)) then
-	      if(CE='1') then
+	      	 if(CE='1') then
 	    s_CountUp <= s_CountUp + "1";
 	end if;
       end if;
