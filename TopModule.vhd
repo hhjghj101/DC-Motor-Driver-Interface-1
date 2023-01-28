@@ -35,7 +35,7 @@ architecture Behavioral of TopModule is
 
 	component CounterA
 		port (
-			Clock : in STD_LOGIC;
+			Clock  : in STD_LOGIC;
 			Reset  : in STD_LOGIC;
 			CE     : in  STD_LOGIC;
 			CoutA  : out STD_LOGIC_VECTOR(3 downto 0)
@@ -95,7 +95,7 @@ begin
 	Counter2 : CounterB 
 		port map
 			( 
-			  Clock => s_Clock,
+			  Clock  => s_Clock,
 			  Reset  => Reset,
 			  CoutB  => s_CoutB
 			);
@@ -103,8 +103,8 @@ begin
 	Comparator1 : Comparator 
 		port map
 			( 
-			  CinA => s_CoutA,
-			  CinB => s_CoutB,
+			  CinA    => s_CoutA,
+			  CinB    => s_CoutB,
 			  CompOut => CompOut
 			);
 		
